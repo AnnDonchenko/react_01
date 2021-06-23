@@ -1,4 +1,7 @@
 .posts{
-    display: flex;
     flex-wrap: wrap;
+    display: none;
+}
+.active{
+    display: flex;
 }
