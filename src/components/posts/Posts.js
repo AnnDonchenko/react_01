@@ -15,6 +15,7 @@ export default function Posts(){
 
     return(
         <div className={'wrap'}>
+
             {
                 postList.map((value, index)=> <Post key={index} item={value}/>)
             }
