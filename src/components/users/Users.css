@@ -1,7 +1,7 @@
 .posts{
-    flex-wrap: wrap;
-    display: none;
-}
-.active{
     display: flex;
+    flex-wrap: wrap;
+}
+.hide{
+    display: none;
 }
