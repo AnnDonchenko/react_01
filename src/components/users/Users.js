@@ -1,5 +1,4 @@
 import './Users.css';
-import Post from "../posts/Post";
 import {useEffect, useState} from "react";
 import User from "./User";
 

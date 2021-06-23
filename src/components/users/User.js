@@ -1,11 +1,12 @@
-import Posts from "../posts/Posts";
+
+import PostsForUser from "../postsForUser/PostsForUser";
 
 export default function User ({item:{id, name, username, email, address, phone, website, company}}){
     return (
         <div>
             <h2>{name} <i>{username}</i></h2>
             <div className="posts">
-                <Posts id={id}/>
+                <PostsForUser id={id}/>
             </div>
             <hr/>
         </div>

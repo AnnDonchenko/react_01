@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import Post from "./Post";
+import Post from "../posts/Post";
 
 export default function PostsForUser({id}){
     let [postList, setPostList] = useState([]);
@@ -14,7 +14,7 @@ export default function PostsForUser({id}){
     let filter = postList.filter(value => value.userId === id);
 
     return(
-        <div>
+        <div className={'wrap'}>
             {
                 filter.map((value, index)=> <Post key={index} item={value}/>)
             }

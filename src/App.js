@@ -6,9 +6,15 @@ import Users from "./components/users/Users";
 function App() {
   return (
     <div>
-        <Posts/>
+        {/******HomeWork_01*****/}
+        {/*<Posts/>*/}
+
+        {/*****Lesson_01******/}
         {/*<Comments/>*/}
-        {/*<Users/>*/}
+
+        {/*****Lesson_01 dopolnitelno ******/}
+        <Users/>
+
     </div>
   );
 }
