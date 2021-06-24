@@ -1,0 +1,22 @@
+.users{
+    width: 50%;
+    padding: 10px;
+    background-color: antiquewhite;
+}
+.user-details{
+    width: 50%;
+    padding: 10px;
+    background-color: aliceblue;
+}
+.user-item{
+    display: flex;
+    column-gap: 30px;
+    line-height: 1;
+}
+.user-item h3{
+    margin: 5px 0;
+}
+.user-item > div{
+    display: flex;
+    align-items: center;
+}

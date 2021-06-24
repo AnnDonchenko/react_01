@@ -1,0 +1,21 @@
+.posts{
+    width: 60%;
+    padding: 10px;
+    background-color: azure;
+}
+.post-item{
+    display: flex;
+    justify-content: space-between;
+}
+.post-item p{
+    margin: 5px 0;
+}
+.post-item div{
+    display: flex;
+    align-items: center;
+}
+.post-details{
+    width: 40%;
+    padding: 10px;
+    background-color: beige;
+}
