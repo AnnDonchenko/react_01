@@ -1,0 +1,10 @@
+.wrap{
+    padding: 20px;
+}
+.user-item{
+    border: 1px solid gray;
+    padding: 10px;
+}
+.user-item p{
+    margin: 0;
+}
