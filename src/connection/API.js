@@ -5,7 +5,7 @@ let axiosAccess = axios.create({
 });
 
 const getUsers = () => axiosAccess.get('/users');
-const getPosts = () => axiosAccess.get('/posts');
-const getComments = () => axiosAccess.get('/comments');
+const getPosts = (id) => axiosAccess.get('users/' + id + '/posts');
+const getComments = (id) => axiosAccess.get('users/' + id + '/comments');
 
 export {getUsers, getPosts, getComments}

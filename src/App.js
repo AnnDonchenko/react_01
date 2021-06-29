@@ -14,30 +14,26 @@ function App() {
        getUsers().then(value => setUsers([...value.data]))
     },[]);
 
-    useEffect( () => {
-        getPosts().then(value => setPosts([...value.data]))
-    },[]);
-
-    useEffect(()=>{
-        getComments().then(value=> setComments([...value.data]))
-    },[])
+    // useEffect( () => {
+    //     getPosts().then(value => setPosts([...value.data]))
+    // },[]);
+    //
+    // useEffect(()=>{
+    //     getComments().then(value=> setComments([...value.data]))
+    // },[])
 
     const showPosts = (id) => {
-        getPosts().then(value => setPosts([...value.data]));
-        let filter = posts.filter(value => value.userId === id);
-        return filter;
+        getPosts(id).then(value => setPosts([...value.data]));
     }
 
     const showComments = (id) =>{
-        getComments().then(value => setComments([...value.data]));
-        let filter = comments.filter(value => value.postId === id);
-        return filter;
+        getComments(id).then(value => setComments([...value.data]));
     }
 
   return (
     <div className={'wrap'}>
         <h1>This lesson_02 branch</h1>
-        <Users items={users} showPosts={showPosts} showComments={showComments}/>
+        <Users items={users} showPosts={showPosts} posts={posts} showComments={showComments} comments={comments}/>
     </div>
   );
 }
