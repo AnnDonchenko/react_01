@@ -1,0 +1,9 @@
+nav a{
+    display: block;
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
