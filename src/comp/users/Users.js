@@ -7,7 +7,7 @@ export default function Users (){
 
     useEffect(()=>{
         getUsers().then(value => setUsers([...value.data]));
-    });
+    },[]);
 
     return (
     <div>

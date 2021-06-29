@@ -3,12 +3,10 @@
 //     про users/posts/comments відповідно до посилання за логікою.
 //     Для всього використовувати окремий компонент (Users->User, Posts->Post)
 import './App.css';
-import Users from './comp/users/Users';
-import Posts from './comp/posts/Posts';
-import Comments from './comp/comments/Comments';
-
+import Users from "./comp/users/Users";
+import Posts from "./comp/posts/Posts";
+import Comments from "./comp/comments/Comments";
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
-
 
 function App() {
   return (
@@ -28,7 +26,6 @@ function App() {
                  <Route path={'/posts'} component={Posts}/>
                  <Route path={'/comments'} component={Comments}/>
              </Switch>
-
          </div>
       </Router>
     </div>

@@ -7,7 +7,7 @@ export default function Posts (){
 
     useEffect(()=>{
         getPosts().then(value => setPosts([...value.data]));
-    });
+    }, []);
 
     return (
         <div>
