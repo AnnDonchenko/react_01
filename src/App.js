@@ -33,7 +33,7 @@ function App() {
   return (
     <div className={'wrap'}>
         <h1>This lesson_02 branch</h1>
-        <Users items={users} showPosts={showPosts} posts={posts} showComments={showComments} comments={comments}/>
+        <Users users={users} showPosts={showPosts} posts={posts} showComments={showComments} comments={comments}/>
     </div>
   );
 }

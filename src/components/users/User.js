@@ -2,17 +2,17 @@ import Posts from '../posts/Posts';
 import {useState} from 'react';
 import {getPosts} from "../../connection/API";
 
-export default function User ({item, showPosts, showComments, posts, comments}){
+export default function User ({user, showPosts, showComments, posts, comments}){
     const [userPostsArr, setUserPostsArr] = useState([]);
     // const [posts, setPosts] = useState([]);
     return (
     <div className={'user-item'}>
-        <h4>{item.id} - {item.name}</h4>
+        <h4>{user.id} - {user.name}</h4>
         <button onClick={()=>{
-            setUserPostsArr(showPosts(item.id));
+            setUserPostsArr(showPosts(user.id));
 
             // getPosts(item.id).then(value => setPosts([...value.data]));
-            console.log(item.id);
+            console.log(user.id);
         }}>Show posts</button>
 
         <Posts posts={posts} showComments={showComments} comments={comments}/>
