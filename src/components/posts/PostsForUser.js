@@ -9,7 +9,7 @@ export default function PostsForUser ({userID}){
     return (
         <div>
             {
-            postsForUser.map(value => <p>{value.title}</p>)
+                postsForUser.map(value => <p key={value.id}>{value.id} - {value.title}</p>)
             }
         </div>
     );

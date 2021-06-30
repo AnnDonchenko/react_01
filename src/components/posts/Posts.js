@@ -1,9 +1,19 @@
 import {useEffect, useState} from "react";
+import {getPosts} from "../../connection/API";
+import Post from "./Post";
 
 export default function Posts (){
+    const [posts, setPosts] = useState([]);
+
+    useEffect(()=>{
+        getPosts().then(value => setPosts([...value.data]));
+    },[]);
+
     return (
-        <div>
-            rewfnkjvndf
+        <div className={'content'}>
+            {
+                posts.map(value => <Post key={value.id} post={value}/>)
+            }
         </div>
     );
 }

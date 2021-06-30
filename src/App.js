@@ -9,49 +9,57 @@
 import './App.css';
 import {BrowserRouter as Router, Link, Switch, Route} from "react-router-dom";
 import Users from "./components/users/Users";
-import {useReducer} from "react";
+import Posts from "./components/posts/Posts";
+import Comments from "./components/comments/Comments";
 
-const INC_COUNTER1 = 'INC_COUNTER1';
-
-const reducer = (state, action) => {
-    console.log(action);
-    switch (action.type) {
-        case INC_COUNTER1:
-            return {...state, counter1: state.counter1 + action.payload}
-        default:
-            return state
-    }
-}
+// Reducer
+// import {useReducer} from "react";
+// const INC_COUNTER1 = 'INC_COUNTER1';
+//
+// const reducer = (state, action) => {
+//     console.log(action);
+//     switch (action.type) {
+//         case INC_COUNTER1:
+//             return {...state, counter1: state.counter1 + action.payload}
+//         default:
+//             return state
+//     }
+// }
+// function App() {
+//     const initialState = {
+//         counter1: 0,
+//         counter2: 0,
+//     }
+//     const [{counter1, counter2}, dispatch] = useReducer(reducer, initialState);
+//     return (
+//     <div>
+//         <h2>Counter 1: {counter1}</h2>
+//         <button onClick={() => dispatch({type: INC_COUNTER1, payload: 5})}>Inc 1</button>
+//         <hr/>
+//         <h2>Counter 2: {counter2}</h2>
+//         <button>Inc 2</button>
+//
+//     </div>
+//   );
+// }
 
 function App() {
-    const initialState = {
-        counter1: 0,
-        counter2: 0,
-    }
-
-    const [{counter1, counter2}, dispatch] = useReducer(reducer, initialState);
     return (
-    <div>
-        <h1>This is lesson_03 branch</h1>
-        <Router>
-            <nav>
-                <Link to={'/users'}>Users</Link>
-                <Link to={'/posts'}>Posts</Link>
-                <Link to={'/comments'}>Comments</Link>
-            </nav>
-            <Switch>
-                <Route path={'/users'} componet={Users}/>
-            </Switch>
-        </Router>
-        <hr/>
-        <h2>Counter 1: {counter1}</h2>
-        <button onClick={() => dispatch({type: INC_COUNTER1, payload: 5})}>Inc 1</button>
-        <hr/>
-        <h2>Counter 2: {counter2}</h2>
-        <button>Inc 2</button>
-
-    </div>
-  );
+        <div className={'wrap'}>
+            <h1>This is lesson_03 branch</h1>
+            <Router>
+                <nav>
+                    <Link to={'/users'}>Users</Link>
+                    <Link to={'/posts'}>Posts</Link>
+                    <Link to={'/comments'}>Comments</Link>
+                </nav>
+                <Switch>
+                    <Route path={'/users'} component={Users}/>
+                    <Route path={'/posts'} component={Posts}/>
+                    <Route path={'/comments'} component={Comments}/>
+                </Switch>
+            </Router>
+        </div>
+    );
 }
-
 export default App;
