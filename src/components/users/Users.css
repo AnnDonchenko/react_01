@@ -1,3 +1,25 @@
+.content.users{
+    grid-template-columns: 1fr 1fr;
+}
+.users .user-item{
+    border: 1px solid gray;
+    box-shadow: 1px 1px 5px gray;
+    padding: 5px;
+}
+.users .user-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
 .user-name{
     font-weight: bold;
+}
+.user-username{
+    font-style: italic;
+    color: teal;
+}
+.user-names{
+    display: flex;
+    justify-content: space-between;
 }

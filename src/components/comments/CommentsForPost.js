@@ -8,7 +8,7 @@ export default function CommentsForPost ({postID}){
     },[]);
 
     return (
-        <div>
+        <div className={'list'}>
             {
                 commentsForPost.map(value => <p key={value.id}>{value.id} - {value.name}</p>)
             }

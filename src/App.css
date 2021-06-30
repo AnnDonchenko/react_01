@@ -1,3 +1,7 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 .wrap{
     padding: 0 50px 50px;
 }
@@ -16,6 +20,19 @@ nav a{
 }
 .content{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
     margin-top: 20px;
+}
+.btn{
+    background-color: teal;
+    color: white;
+    border: 0;
+    padding: 5px;
+    margin-top: 10px;
+}
+.list{
+    margin-top: 10px;
+}
+.list p:nth-child(odd){
+    background-color: azure;
 }

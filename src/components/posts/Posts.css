@@ -1,0 +1,39 @@
+.content.posts{
+    grid-template-columns: 1fr 1fr;
+}
+.posts .post-item{
+    border: 1px solid gray;
+    box-shadow: 1px 1px 5px gray;
+    padding: 5px;
+}
+.posts .post-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.post-id{
+    position: absolute;
+    left: -5px;
+    top: -6px;
+    font-size: 22px;
+    font-weight: bolder;
+    background: gray;
+    color: white;
+    display: block;
+    padding: 0 7px;
+}
+.post-title{
+    margin-left: 40px;
+    font-weight: bold;
+    height: 45px;
+}
+.post-title:first-letter{
+    text-transform: uppercase;
+}
+.post-body{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

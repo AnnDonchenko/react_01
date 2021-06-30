@@ -7,7 +7,7 @@ export default function PostsForUser ({userID}){
         getUserPosts(userID).then(value => setPostsForUser([...value.data]))
     },[])
     return (
-        <div>
+        <div className={'list'}>
             {
                 postsForUser.map(value => <p key={value.id}>{value.id} - {value.title}</p>)
             }
