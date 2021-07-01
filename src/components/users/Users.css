@@ -1,0 +1,8 @@
+.users{
+    display: flex;
+    column-gap: 5px;
+}
+.user-item{
+    background-color: darksalmon;
+    padding: 5px;
+}
