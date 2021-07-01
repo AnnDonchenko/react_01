@@ -13,6 +13,7 @@ export default function PostDetails (props){
     useEffect(()=>{
         setPost({...state});
     },[state]);
+
     return (
         <div>
             {

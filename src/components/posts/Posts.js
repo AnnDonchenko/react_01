@@ -11,9 +11,11 @@ export default function Posts (){
     },[]);
     return (
         <div>
-            {
-                posts.map(value => <Post key={value.id} post={value}/>)
-            }
+            <div className={'posts'}>
+                {
+                    posts.map(value => <Post key={value.id} post={value}/>)
+                }
+            </div>
             <Switch>
                 <Route path={'/posts/:id'} component={PostDetails}/>
             </Switch>
