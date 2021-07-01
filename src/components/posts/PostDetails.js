@@ -15,10 +15,11 @@ export default function PostDetails (props){
     },[state]);
 
     return (
-        <div>
-            {
-                post.body
-            }
+        <div className={'post-details'}>
+            <h2>Post Detail:</h2>
+            <p><span>Title - </span>{post.title}</p>
+            <p><span>Body - </span>{post.body}</p>
+            <p>Post was wrote by user with id - <span>{post.userId}</span></p>
         </div>
     );
 }

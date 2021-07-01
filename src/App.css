@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrap{
+    padding: 50px;
+}
+.navigation{
+     display: flex;
+     column-gap: 10px;
+ }
+ .navigation a{
+     display: block;
+     width: 100px;
+     padding: 10px;
+     text-decoration: none;
+     text-align: center;
+     background-color: crimson;
+     color: white;
+ }
+ h2{
+     margin: 10px 0;
+ }

@@ -1,0 +1,31 @@
+.posts{
+    height: 300px;
+    overflow-x: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.post-item{
+    border-bottom: 1px solid lightgray;
+}
+.post-item{
+    border-bottom: 1px solid lightgray;
+}
+.post-item .btn{
+    display: inline-block;
+    padding: 0 5px;
+    margin: 5px 0;
+    background-color: coral;
+    text-decoration: none;
+    color: white;
+}
+.post-item .btn:hover{
+    background-color: #ff6c3a;
+}
+.post-details p{
+    margin-bottom: 10px;
+}
+.post-details span{
+    font-weight: bold;
+    font-size: 1.1rem;
+}

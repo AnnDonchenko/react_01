@@ -5,7 +5,7 @@ export default function User ({user}){
     return (
         <div className={'user-item'}>
             <p>{user.name}</p>
-            <Link to={'/users/' + user.id}>User details</Link>
+            <Link className={'btn'} to={'/users/' + user.id}>User details</Link>
         </div>
     );
 }

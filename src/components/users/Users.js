@@ -12,6 +12,7 @@ export default function Users (){
     },[]);
     return (
         <div>
+            <h2>All Users:</h2>
             <div className="users">
                 {
                     users.map(value => <User key={value.id} user={value}/>)

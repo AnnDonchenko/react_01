@@ -13,10 +13,10 @@ import Posts from "./components/posts/Posts";
 
 function App() {
   return (
-    <div>
+    <div className={'wrap'}>
         <h1>This is homework_04 branch</h1>
         <Router>
-            <div>
+            <div className={'navigation'}>
                 <Link to={'/users'}>Users</Link>
                 <Link to={'/posts'}>Posts</Link>
             </div>
