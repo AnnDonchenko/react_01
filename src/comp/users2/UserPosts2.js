@@ -7,8 +7,8 @@ export default function UserPosts2 ({id}){
         getUserPosts(id).then(value => setUserPosts([...value.data]));
     },[id]);
     return (
-        <div>
-            {userPosts.map(value => <p key={value.id}>{value.title}</p>)}
-        </div>
+        <ol className="user-posts list-group list-group-numbered">
+            {userPosts.map(value => <li className="list-group-item" key={value.id}>{value.title}</li>)}
+        </ol>
     );
 }

@@ -10,13 +10,12 @@ export default function Users (){
         getUsers().then(value => setUsers([...value.data]));
     },[]);
     return (
-        <div>
-            <div>{
+        <div className={'users row'}>
+            {
                 users.map(value => <User key={value.id} user={value}/>)
-            }</div>
-
+            }
             <Switch>
-                <Route path={'/users/:id/posts'} component={UserPosts}/>
+                <Route path={'/users/:id/allposts'} component={UserPosts}/>
             </Switch>
         </div>
     );

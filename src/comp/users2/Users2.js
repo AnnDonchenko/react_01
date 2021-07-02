@@ -1,8 +1,6 @@
 import {useEffect, useState} from "react";
 import {getUsers} from "../../serv/API";
 import User2 from "./User2";
-import {Route, Switch} from "react-router-dom";
-import UserPosts2 from "./UserPosts2";
 
 export default function Users2 (){
     const [users, setUsers] = useState([]);
@@ -10,7 +8,7 @@ export default function Users2 (){
         getUsers().then(value => setUsers([...value.data]));
     },[]);
     return (
-        <div>
+        <div className={'users row'}>
             {
               users.map(value => <User2 key={value.id} user={value}/>)
             }
