@@ -16,13 +16,15 @@
 .post-item > p:first-letter{
     text-transform: uppercase;
 }
-.post-item .btn:hover{
-    background-color: #ff6c3a;
-}
 .post-details p{
     margin-bottom: 10px;
 }
 .post-details span{
     font-weight: bold;
     font-size: 1.1rem;
+}
+.post-details h2 span{
+    font-size: 2rem;
+    margin: 0 10px;
+    color: #594c91;
 }

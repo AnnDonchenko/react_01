@@ -8,4 +8,6 @@ const getUser = (id) => axiosData('/users/' + id);
 const getPosts = () => axiosData('/posts');
 const getPost = (id) => axiosData('/posts/' + id);
 
-export {getUsers, getUser, getPosts, getPost}
+const getComments = () => axiosData('/comments');
+
+export {getUsers, getUser, getPosts, getPost, getComments}
