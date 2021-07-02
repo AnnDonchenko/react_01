@@ -5,10 +5,10 @@ export default function Post ({post}){
     return (
         <div className={'post-item'}>
             <p>{post.title}</p>
-            <Link className={'btn'} to={{
+            <div><Link className={'btn'} to={{
                 pathname: '/posts/' +post.id,
                 state: post
-            }}>Post Details</Link>
+            }}>Post Details</Link></div>
         </div>
     );
 }

@@ -4,21 +4,33 @@
     column-gap: 5px;
 }
 .user-item{
-    background-color: darksalmon;
+    background-color: #b1a5de;
     padding: 5px;
     margin-bottom: 5px;
     flex-grow: 1;
+    flex-basis: 200px;
 }
-.user-item .btn{
-    display: inline-block;
-    padding: 0 5px;
-    margin: 5px 0;
-    border: 1px solid white;
-    text-decoration: none;
-    color: white;
+.user-details-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.user-details h2 span{
+    font-size: 2rem;
+    margin: 0 10px;
+    color: #594c91;
 }
 .user-details span{
     font-weight: bold;
     font-size: 1.1rem;
     margin-right: 10px;
+}
+.user-details span.icon{
+    width: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+ }
+.user-details-adress,
+.user-details-company{
+    display: flex;
 }

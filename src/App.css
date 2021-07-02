@@ -3,8 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #f1e4fe;
+}
 .wrap{
-    padding: 50px;
+    padding: 20px 50px 50px 50px;
+}
+h1{
+    margin-bottom: 30px;
 }
 .navigation{
      display: flex;
@@ -16,9 +22,25 @@
      padding: 10px;
      text-decoration: none;
      text-align: center;
-     background-color: crimson;
+     background-color: #81a34a;
+     border-radius: 5px;
      color: white;
  }
+.navigation a:hover{
+    background-color: #5d7b38;
+}
  h2{
      margin: 10px 0;
  }
+.btn{
+    display: inline-block;
+    padding: 3px 7px;
+    margin: 5px 0;
+    text-decoration: none;
+    background-color: #594c91;
+    border-radius: 5px;
+    color: white;
+}
+.btn:hover {
+    background-color: #3f3565;
+}

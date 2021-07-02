@@ -4,20 +4,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
+    background-color: #b1a5de;
+    padding: 10px;
 }
 .post-item{
     border-bottom: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.post-item{
-    border-bottom: 1px solid lightgray;
-}
-.post-item .btn{
-    display: inline-block;
-    padding: 0 5px;
-    margin: 5px 0;
-    background-color: coral;
-    text-decoration: none;
-    color: white;
+.post-item > p:first-letter{
+    text-transform: uppercase;
 }
 .post-item .btn:hover{
     background-color: #ff6c3a;
