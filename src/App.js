@@ -8,11 +8,11 @@ function App() {
   return (
     <div>
         <h1>This is lesson_04 branch</h1>
-        <button className={'btn btn-success'}>sasd</button>
+        {/*<button className={'btn btn-success'}>sasd</button>*/}
         <Router>
             <nav>
-                <p><Link to={'/users'}>Show all users</Link></p>
-                <p><Link to={'/users2'}>Show all users v2</Link></p>
+                <p><Link className={'btn btn-success'} to={'/users'}>Show all users with posts below</Link></p>
+                <p><Link className={'btn btn-success'} to={'/users2'}>Show all users with posts below user</Link></p>
 
             </nav>
             <Switch>
