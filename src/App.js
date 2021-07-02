@@ -14,7 +14,6 @@ function App() {
   return (
     <div className={'wrap'}>
         <h1>This is lesson_04 branch</h1>
-        {/*<button className={'btn btn-success'}>sasd</button>*/}
         <Router>
             <ul className="nav nav-tabs">
                 <li className="nav-item">
