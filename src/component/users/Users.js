@@ -1,6 +1,7 @@
 import {useEffect} from "react";
 import {getUsers} from "../../services/API";
 import {useDispatch, useSelector} from "react-redux";
+import User from "./User";
 
 export default function Users() {
     const users = useSelector((state) => state.users);
@@ -18,12 +19,12 @@ export default function Users() {
             type: 'SET_USERS',
             payload: [...value.data]
         }));
-    }, []);
+    }, [dispatch]);
 
     return (
         <div>
             <h2>Users</h2>
-            {users.map(value => <p key={value.id}>{value.name}</p>)}
+            {users.map(value => <User key={value.id} user={value}/>)}
         </div>
     );
 }

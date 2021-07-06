@@ -9,7 +9,8 @@ import {createStore} from "redux";
 const initialState = {
     counterValue: 0,
     users: [],
-    posts: []
+    posts: [],
+    comments: []
 }
 
 const counterReducer = (state = initialState, action) => {
@@ -27,6 +28,8 @@ const counterReducer = (state = initialState, action) => {
         case 'SET_USERS':
             return {...state, users: action.payload};
         case 'SET_POSTS':
+            return {...state, posts: action.payload};
+        case 'SET_COMMENTS':
             return {...state, posts: action.payload};
         default:
             return state;
