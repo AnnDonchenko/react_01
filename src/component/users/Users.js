@@ -6,19 +6,18 @@ export default function Users() {
     const users = useSelector((state) => state.users);
     const dispatch = useDispatch();
 
+    // const fetchData = async () => {
+    //     const resp = await fetch('https://jsonplaceholder.typicode.com/users');
+    //     const data = await resp.json();
+    //     dispatch({type: 'SET_USERS', payload: data})
+    // }
+
     useEffect(() => {
+        // fetchData()
         getUsers().then(value => dispatch({
             type: 'SET_USERS',
             payload: [...value.data]
         }));
-
-        // let users = [];
-        // getUsers().then(value => users = [...value.data]);
-        // dispatch({
-        //     type: 'SET_USERS',
-        //     payload: users,
-        // })
-
     }, []);
 
     return (
