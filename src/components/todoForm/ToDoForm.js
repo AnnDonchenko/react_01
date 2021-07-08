@@ -18,6 +18,7 @@ export default function ToDoForm (){
     }
     return (
         <div className={'todo-div'}>
+
             <form className={'form'} onSubmit={addToDoItem}>
                 <input type="text" name="title" onChange={onChange} value={todoTitle}/>
                 <button type="submit">Add</button>
