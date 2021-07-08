@@ -1,0 +1,11 @@
+.todo-div{
+    display: flex;
+    column-gap: 30px;
+}
+.todo-item{
+    display: flex;
+    align-items: center;
+}
+.todo-item .title{
+    margin-right: 10px;
+}
