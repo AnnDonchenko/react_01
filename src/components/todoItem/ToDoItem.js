@@ -11,6 +11,9 @@ export default function ToDoItem({item}) {
 
             <p className={'title'}>{item.id} - {item.title}</p>
             <div>
+
+
+
                 <button onClick={delItem}>DEL</button>
             </div>
         </div>
