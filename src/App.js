@@ -1,11 +1,47 @@
 import './App.css';
+import ToDoForm from "./component/todoForm/ToDoForm";
+import {getToDos, setToDo} from "./services/API";
+import {useDispatch, useSelector} from "react-redux";
+import ToDo from "./component/todo/ToDo";
+import {useEffect} from "react";
+import{
+    setLoadingFalse,
+    setLoadingTrue,
+    addTodo,
+    pushTodo,
+} from './redux/actionCreators';
 
 function App() {
-  return (
-    <div>
-        <h1>This master branch</h1>
-    </div>
-  );
+    const {todos, todoLoading} = useSelector(store => store)
+    const dispatch = useDispatch();
+
+    useEffect(async () => {
+        dispatch(setLoadingTrue())
+        try {
+            await getToDos().then(value => dispatch(addTodo(value)));
+        } catch (e){
+            console.log(e);
+        } finally {
+            dispatch(setLoadingFalse())
+        }
+    }, [dispatch]);
+
+    const onToDoCreate = async (title, description) => {
+        if (!title || !description) return;
+        await setToDo(title, description).then(value => {
+            console.log('value', value);
+            dispatch(pushTodo(value))
+        });
+    }
+    return (
+        <div>
+            <h1>This is homework_06_redux_todo_v2 branch</h1>
+            <div className="wrap">
+                <ToDoForm onSubmit={onToDoCreate}/>
+                <ToDo todos={todos} isLoading={todoLoading}/>
+            </div>
+        </div>
+    );
 }
 
 export default App;

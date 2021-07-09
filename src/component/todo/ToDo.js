@@ -1,14 +1,13 @@
-export default function ToDo (){
-    const onInputChange = () => {
+import ToDoItem from "../todoItem/ToDoItem";
 
-    }
+export default function ToDo ({todos, isLoading}){
+    console.log(isLoading);
+    if (isLoading) return <h2>Loading...</h2>
     return (
-        <div>
-            <form>
-                <input type="text" name="title" onChange={onInputChange} />
-                <input type="text" name="body" onChange={onInputChange} />
-                <button>add To Do</button>
-            </form>
+        <div className={'todo-body'}>
+            {
+                todos.map(value=><ToDoItem key={value.id} item={value}/>)
+            }
         </div>
     );
 }
