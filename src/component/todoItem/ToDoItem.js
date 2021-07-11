@@ -8,17 +8,18 @@ export default function ToDoItem({item}) {
     const delItem = (id) => {
         delToDo(id).then(value => dispatch(delTodo(id)));
     }
-    const changeItemStatus = (id, comleted) => {
-        changeToDoStatus(id, comleted).then(value => dispatch(changeTodoStatus()))
-        // changeToDoStatus(id, comleted).then(value => console.log(value))
+    const changeItemStatus = (id, compl) => {
+        changeToDoStatus(id, compl).then(value => dispatch(changeTodoStatus({id, compl})))
     }
     return (
         <div>
             <div>Title: {item.title}</div>
             <div>Description: {item.description}</div>
-            <div>Creation Date: {new Date(item.createdAt).toDateString()}</div>
-            <div>Status: {item.completed.toString()}</div>
-            <button onClick={() => changeItemStatus(item.id, true)}>true</button>
+            <div>Date: {new Date(item.createdAt).toDateString()}</div>
+            <div className={'status'}>
+                <div>Status: {item.completed.toString()}</div>
+                <button onClick={() => changeItemStatus(item.id, !item.completed)}>change</button>
+            </div>
             <button onClick={() => delItem(item.id)}>delete</button>
             <hr/>
         </div>

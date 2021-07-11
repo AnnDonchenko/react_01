@@ -26,10 +26,12 @@ const delToDo = async (id) => {
 const changeToDoStatus = async (id, completed) => {
     const response = await fetch('http://localhost:8888/update-todo/' + id, {
         method: 'PATCH',
-        body: JSON.stringify(completed)
+        body: JSON.stringify({completed}),
+        headers: {
+            'Content-Type': 'application/json'
+        }
     })
     const data = await response.json();
-    console.log(data)
     return data;
 }
 
