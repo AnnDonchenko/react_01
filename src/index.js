@@ -10,7 +10,8 @@ const initialState = {
     counterValue: 0,
     users: [],
     posts: [],
-    comments: []
+    comments: [],
+    photos: []
 }
 
 const counterReducer = (state = initialState, action) => {
@@ -30,7 +31,9 @@ const counterReducer = (state = initialState, action) => {
         case 'SET_POSTS':
             return {...state, posts: action.payload};
         case 'SET_COMMENTS':
-            return {...state, posts: action.payload};
+            return {...state, comments: action.payload};
+        case 'SET_PHOTOS':
+            return {...state, photos: action.payload};
         default:
             return state;
     }

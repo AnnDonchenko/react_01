@@ -10,7 +10,7 @@ function App() {
     return (
         <div>
             <h1>This is homework_05 branch</h1>
-            <div>
+            <div className={'wrap'}>
                 <Router>
                     <Navs/>
                     <Routes/>

@@ -15,6 +15,7 @@ export default function Comments (){
     },[dispatch]);
     return (
         <div>
+            <h2>Comments</h2>
             {comments.map(value=><Comment key={value.id} comment={value}/>)}
         </div>
     );
