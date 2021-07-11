@@ -2,7 +2,9 @@ import {
     ADD_TODO,
     PUSH_TODO,
     LOADING_TRUE,
-    LOADING_FALSE
+    LOADING_FALSE,
+    DEL_TODO,
+    CHANGE_TODO_STATUS
 } from '../actionTypes';
 
 const initialState = {
@@ -10,7 +12,6 @@ const initialState = {
     todoLoading: true
 }
 export const todoReducer = (state=initialState,action) => {
-    console.log(action);
     switch (action.type){
         case ADD_TODO:
             return {...state, todos: action.payload}
@@ -20,7 +21,18 @@ export const todoReducer = (state=initialState,action) => {
             return {...state, todoLoading: true}
         case LOADING_FALSE:
             return {...state, todoLoading: false}
+        case DEL_TODO:
+            return {...state, todos: [...state.todos.filter(el => el.id !== action.payload)]}
+        case CHANGE_TODO_STATUS:
+            return {...state, todos: action.payload}
         default:
             return state;
     }
 }
+
+// case STATUS_TODO: {
+//     let find = state.todos.find(todo => todo.id === action.id);
+//     find.completed = !action.completed
+//     console.log(find.completed, action.completed)
+//     return {...state}
+// }

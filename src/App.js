@@ -15,7 +15,7 @@ function App() {
     const {todos, todoLoading} = useSelector(store => store)
     const dispatch = useDispatch();
 
-    useEffect(async () => {
+    const addingTodo = async () => {
         dispatch(setLoadingTrue())
         try {
             await getToDos().then(value => dispatch(addTodo(value)));
@@ -24,15 +24,21 @@ function App() {
         } finally {
             dispatch(setLoadingFalse())
         }
-    }, [dispatch]);
+    }
+
+
+    useEffect(()=>{
+        addingTodo()
+    }, []);
 
     const onToDoCreate = async (title, description) => {
         if (!title || !description) return;
         await setToDo(title, description).then(value => {
-            console.log('value', value);
             dispatch(pushTodo(value))
         });
     }
+
+
     return (
         <div>
             <h1>This is homework_06_redux_todo_v2 branch</h1>
