@@ -8,7 +8,9 @@ export default function ToDoItem({item}) {
     }
     return (
         <div className={'todo-item'}>
-            <p className={'title'}>{item.id} - {item.title}</p>
+            <p className={'id'}>#{item.id}</p>
+            <p className={'title'}>title - {item.title}</p>
+            <p className={'body'}>body - {item.body}</p>
             <div>
                 <button onClick={delItem}>DEL</button>
             </div>

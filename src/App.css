@@ -1,10 +1,29 @@
+*{
+    margin: 0;
+}
+.wrap{
+    padding: 30px;
+}
+h1{
+    margin-bottom: 30px;
+}
 .todo-div{
     display: flex;
     column-gap: 30px;
 }
-.todo-item{
+form > *{
+    display: block;
+    margin-bottom: 10px;
+}
+.todo-list{
     display: flex;
-    align-items: center;
+    column-gap: 20px;
+    flex-wrap: wrap;
+}
+.todo-item{
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 .todo-item .title{
     margin-right: 10px;
